@@ -20,10 +20,11 @@ nav {
   height: auto;
 }
 .spots {
-  display: flex;
-  flex-direction: row;
+  display: none;
+  /* display: flex;
+  flex-direction: row; 
   border: 2px solid rgb(170, 237, 76);
-  background-color: rgb(170, 237, 76);
+  background-color: rgb(170, 237, 76);*/
 }
 
 .spots img {
@@ -42,4 +43,23 @@ nav {
 
 .more-info {
   background-color: #e89242;
+}
+
+/* tablet */
+@media (min-width: 640px) {
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .spots {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid rgb(170, 237, 76);
+    background-color: rgb(170, 237, 76);
+  }
+}
+
+.product-recs {
+  display: flex;
+  flex-direction: row;
 }
