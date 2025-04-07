@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.logo-icons {
+  border: 2px solid rgb(19, 201, 101);
+}
+
+nav {
+  border: 2px solid blue;
+}
+
+.hero {
+  border: 2px solid rgb(235, 176, 222);
+  background-color: rgb(235, 176, 222);
+}
+.hero img {
+  width: 100%;
+  height: auto;
+}
+.spots {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid rgb(170, 237, 76);
+  background-color: rgb(170, 237, 76);
+}
+
+.spots img {
+  width: 100%;
+}
+
+.popular-products {
+  background-color: #2c45c0;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.popular-products img {
+  width: 100%;
+}
