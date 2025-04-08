@@ -1,16 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="stylesheet" href="admin/products/new.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="\css\admin-style.css" />
 
     <title>Admistration</title>
   </head>
   <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <header>
+      <h1>Administration</h1>
+    </header>
+    <main>
+      <span>Produkter</span>
+      <div class="new-product">
+        <h2>Ny Produkt</h2>
+        <label for="name">Namn</label>
+        <input type="text" id="text" />
+
+        <label for="description">Beskrivning</label>
+        <textarea
+          name="description"
+          id="description"
+          rows="5"
+          cols="50"
+        ></textarea>
+        <label for="img-select">Bild</label>
+        <label for="img-button" class="custom-button">Välj fil</label>
+        <input type="file" id="img-button" accept="image/*" />
+
+        <label for="sku">SKU</label>
+        <input type="text" />
+
+        <label for="price">Pris</label>
+        <input type="number" />
+
+        <label for="img-button" class="custom-button">Lägg till</label>
+      </div>
+    </main>
+    <footer>
+      <div class="copyright">
+        <p>Freaky Fashion</p>
+        <i class="bi bi-c-circle"></i>
+      </div>
+    </footer>
   </body>
 </html>
