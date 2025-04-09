@@ -122,9 +122,6 @@ footer {
 /*--------------------------*/
 .product-recs {
   display: none;
-  /*
-  display: flex;
-  flex-direction: row;*/
 }
 
 .logo-iconz img {
@@ -190,6 +187,27 @@ footer {
   .copyright {
     padding-top: 20px;
   }
+
+  /*------------product-details tablet--------------*/
+
+  .product-recs {
+    display: flex;
+    width: 100%;
+
+    padding: 40px;
+  }
+  .product-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 20px;
+  }
+  .product-1 img,
+  .product-2 img,
+  .product-3 img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 /* Desktop */
@@ -212,4 +230,6 @@ footer {
     flex-direction: row;
     gap: 20px;
   }
+
+  /*------------product-details desktop--------------*/
 }
