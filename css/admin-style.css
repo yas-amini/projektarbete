@@ -17,10 +17,17 @@ input,
   border: 1px solid #cccccc;
   height: 30px;
   font-size: medium;
-  width: 300px;
   border-radius: 3px;
 }
-
+input,
+#name {
+  width: 300px;
+}
+input,
+#sku,
+#price {
+  width: 200px;
+}
 header {
   background-color: gray;
   height: 100px;
@@ -75,7 +82,7 @@ main {
   display: none;
 }
 #description {
-  width: 300px;
+  width: 500px;
   min-height: 200px;
   resize: vertical;
   border: 1px solid #cccccc;
