@@ -7,6 +7,8 @@ body {
   min-height: 100vh; /* To make body full viewport height */
   display: flex;
   flex-direction: column;
+  min-width: 500px; /* Set a minimum width for the entire page */
+  overflow-x: auto; /* Allow horizontal scrolling if the viewport is narrower than min-width */
 }
 
 input,

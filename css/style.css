@@ -5,7 +5,10 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   box-sizing: border-box;
 }
-
+body {
+  min-width: 500px; /* Set a minimum width for the entire page */
+  overflow-x: auto;
+}
 /* Common layout patterns */
 .standard-padding {
   padding: 40px;
@@ -314,14 +317,13 @@ button {
   .product-details {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
   }
 
   .product-text-button {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 40px;
+    padding: 20px 40px 40px 0px;
     justify-content: baseline;
   }
 
