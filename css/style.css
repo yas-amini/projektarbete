@@ -1,20 +1,52 @@
+/* Base styles */
 * {
   margin: 0;
   padding: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
 }
 
-.logo-icons {
+/* Common layout patterns */
+.standard-padding {
+  padding: 40px;
+}
+
+.horizontal-padding {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.single-column {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/* Standard link styles */
+.standard-link,
+nav ul li a,
+.more-info a,
+.footer-links a,
+.product a,
+.products a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Header styles */
+.logo-icons,
+.logo-iconz {
   display: flex;
   flex-direction: column;
   padding: 40px 40px 0px 40px;
   box-sizing: border-box;
   width: 100%;
 }
+
 .logo-icons img,
 .logo-iconz img {
   margin-bottom: 20px;
 }
+
 .search-icon {
   font-size: 30px;
   color: rgb(42, 35, 35);
@@ -45,55 +77,60 @@ input {
   display: flex;
   gap: 20px;
 }
+
+/* Navigation */
 nav {
   padding: 30px 40px 20px 40px;
 }
+
 nav ul {
   list-style: none;
   font-size: large;
-  display: grid;
-  gap: 20px;
-}
-nav ul {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
 nav ul li a {
-  text-decoration: none;
-  color: rgb(0, 0, 0);
   font-size: 1rem;
   font-weight: 700;
 }
+
 nav ul li a:hover {
   color: rgb(150, 83, 113);
 }
 
+/* Hero section */
 .hero {
   padding: 30px 40px 10px 40px;
 }
+
 .hero img {
   width: 100%;
   height: auto;
 }
+
 .hero-border {
   padding: 20px;
   border: 1px solid black;
 }
+
+/* Features spots section */
 .spots {
-  display: none;
+  display: none; /* Hidden by default, shown in desktop */
 }
 
 .spots img {
   width: 100%;
 }
 
+/* Product display */
 .popular-products {
   padding: 40px;
   display: grid;
   grid-template-columns: 1fr;
 }
+
 .product {
   margin-bottom: 20px;
 }
@@ -107,24 +144,20 @@ nav ul li a:hover {
   width: 100%;
 }
 
-.product a,
-.products a {
-  color: black;
-  text-decoration: none;
-}
+/* Information section */
 .more-info {
   padding: 0px 40px 20px 40px;
   display: grid;
   grid-template-columns: 1fr;
   line-height: 2rem;
 }
+
 .more-info a {
-  text-decoration: none;
   font-size: 1rem;
   font-weight: 400;
-  color: black;
 }
 
+/* Footer styling */
 .copyright {
   display: flex;
   flex-direction: row-reverse;
@@ -138,21 +171,20 @@ nav ul li a:hover {
   display: grid;
   grid-template-columns: 1fr;
 }
+
 .shopping a,
 .about a {
-  text-decoration: none;
   font-size: 1rem;
 }
+
 .footer-links {
   line-height: 2rem;
 }
+
 footer {
   padding: 20px 40px 0px 40px;
 }
-.footer-links a {
-  color: black;
-  font-size: 1rem;
-}
+
 /*--------------product-details------------*/
 .product-recs {
   display: none;
@@ -161,13 +193,14 @@ footer {
 .logo-iconz img {
   width: 100%;
 }
+
 .product-details img {
   padding: 20px 40px 0px 40px;
   width: 100%;
 }
+
 .container {
   width: 100%;
-  padding: 20px 40px 0px 40px;
 }
 
 .product-text-button {
@@ -176,13 +209,17 @@ footer {
   gap: 10px;
   width: 100%;
 }
+
 .main-brand {
   color: rgb(83, 82, 82);
 }
+
 .main-price {
   font-size: 1rem;
   font-weight: 500;
 }
+
+/* Button styling */
 button {
   background-color: lightblue;
   border-radius: 3px;
@@ -190,101 +227,112 @@ button {
   font-size: 1rem;
   align-items: center;
 }
+
 .shopping {
   padding-bottom: 10px;
 }
+
 /*--------------------*/
 /* MEDIA QUERIES      */
 /*--------------------*/
 
 /* -------tablet-------- */
-
 @media (min-width: 640px) {
+  /* Header and logo adjustments */
   .logo-icons,
   .logo-iconz {
     display: flex;
     flex-direction: row;
   }
+
   .logo-icons img {
     margin-right: 20px;
   }
+
   .logo-iconz img {
     width: 30%;
     margin-right: 20px;
   }
+
+  /* Search icon adjustments */
   .search-icon {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    width: 100%; /* Make sure it takes full width */
+    width: 100%;
     box-sizing: border-box;
   }
+
   .search-icon input {
     height: 20px;
     width: 300px;
   }
+
   .heart-basket {
     display: flex;
     gap: 20px;
-    margin-left: auto; /*pushes it all the way to the right */
+    margin-left: auto;
     width: auto;
   }
+
   .search-icon i,
   .heart-basket i {
-    width: auto; /* Make sure icons only take needed space */
-    margin: 0; /* Remove any default margins */
+    width: auto;
+    margin: 0;
   }
 
-  .search-icon input {
-    height: 20px;
-    width: 300px; /* Fixed width for input */
-  }
-
+  /* Navigation and layout */
   nav ul {
-    display: flex;
     flex-direction: row;
   }
+
   .hero {
     padding: 20px 40px 0px 40px;
   }
+
+  /* Grid adjustments */
   .popular-products {
-    display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
   }
+
   .more-info {
-    display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 20px;
   }
+
   .footer-links {
-    display: grid;
     grid-template-columns: 1fr 1fr;
   }
+
   .copyright {
     padding: 20px;
   }
 
-  /*------------product-details---- tablet--------------*/
+  /*------------product details tablet--------------*/
 
   .product-details {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
   }
+
   .product-text-button {
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Decrease this value to reduce spacing */
+    gap: 10px;
     padding: 40px;
     justify-content: baseline;
   }
+
+  /* Product recommendations */
   .product-recs {
     display: flex;
     flex-direction: column;
     width: 100%;
     padding: 40px;
   }
+
   .product-recs h2 {
     font-size: 1.5rem;
     display: flex;
@@ -298,6 +346,7 @@ button {
     width: 100%;
     gap: 20px;
   }
+
   .product-1 img,
   .product-2 img,
   .product-3 img {
@@ -305,6 +354,7 @@ button {
     height: auto;
   }
 
+  /* Button styling for tablet */
   button {
     background-color: rgb(199, 199, 199);
     border-radius: 4px;
@@ -312,6 +362,7 @@ button {
     max-height: 2rem;
     font-size: 1rem;
   }
+
   .about {
     display: flex;
     flex-direction: column;
@@ -323,18 +374,22 @@ button {
   .container {
     padding-top: 40px;
   }
+
   .heart-basket {
     width: auto;
   }
 
+  /* Hero section adjustments */
   .hero-border {
     display: flex;
     flex-direction: row-reverse;
   }
+
   .hero-border img {
     width: 50%;
     padding-left: 20px;
   }
+
   .hero-text {
     line-height: 24pt;
     display: flex;
@@ -342,15 +397,18 @@ button {
     gap: 20px;
   }
 
+  /* Feature spots display */
   .spots {
     display: flex;
     flex-direction: row;
     gap: 20px;
     padding: 50px 40px 10px 40px;
   }
+
   .spots div {
     position: relative;
   }
+
   .spots div span {
     color: black;
     font-size: 20px;
@@ -360,29 +418,25 @@ button {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
-    white-space: nowrap; /*keeps the words in one line*/
+    white-space: nowrap;
   }
 
+  /* Product grid for desktop */
   .popular-products {
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 20px;
   }
 
+  /* Footer adjustments */
   .more-info {
     display: flex;
     flex-direction: row;
     gap: 20px;
     justify-content: space-around;
   }
+
   .footer-links {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
   }
-  .copyright {
-    display: flex;
-    gap: 10px;
-  }
-  /*------------product-details desktop--------------*/
 }
