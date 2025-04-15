@@ -6,26 +6,18 @@
   box-sizing: border-box;
 }
 body {
-  min-width: 500px; /* Set a minimum width for the entire page */
+  min-width: 500px;
   overflow-x: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
-/* Common layout patterns */
-.standard-padding {
-  padding: 40px;
-}
-
-.horizontal-padding {
-  padding-left: 40px;
-  padding-right: 40px;
-}
-
-.single-column {
-  display: grid;
-  grid-template-columns: 1fr;
+main {
+  flex: 0 1 auto;
 }
 
 /* Standard link styles */
-.standard-link,
+
 nav ul li a,
 .more-info a,
 .footer-links a,
@@ -118,9 +110,9 @@ nav ul li a:hover {
   border: 1px solid black;
 }
 
-/* Features spots section */
+/* spots section */
 .spots {
-  display: none; /* Hidden by default, shown in desktop */
+  display: none;
 }
 
 .spots img {
@@ -147,12 +139,13 @@ nav ul li a:hover {
   width: 100%;
 }
 
-/* Information section */
+/* Information - links */
 .more-info {
   padding: 0px 40px 20px 40px;
   display: grid;
   grid-template-columns: 1fr;
   line-height: 2rem;
+  margin-bottom: 10px;
 }
 
 .more-info a {
@@ -161,13 +154,6 @@ nav ul li a:hover {
 }
 
 /* Footer styling */
-.copyright {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
-  gap: 10px;
-  padding-top: 10px;
-}
 
 .shopping,
 .about {
@@ -186,11 +172,25 @@ nav ul li a:hover {
 
 footer {
   padding: 20px 40px 0px 40px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+.copyright {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  margin-top: 20px; /*pushes footer to the bottom */
 }
 
 /*--------------product-details------------*/
-.product-recs {
-  display: none;
+
+/*logo + input field*/
+
+.container {
+  width: 100%;
 }
 
 .logo-iconz img {
@@ -199,10 +199,6 @@ footer {
 
 .product-details img {
   padding: 20px 40px 0px 40px;
-  width: 100%;
-}
-
-.container {
   width: 100%;
 }
 
@@ -222,10 +218,12 @@ footer {
   font-weight: 500;
 }
 
-/* Button styling */
+.product-recs {
+  display: none;
+}
+
 button {
-  background-color: lightblue;
-  border-radius: 3px;
+  border-radius: 6px;
   min-height: 2.5rem;
   font-size: 1rem;
   align-items: center;
@@ -239,7 +237,8 @@ button {
 /* MEDIA QUERIES      */
 /*--------------------*/
 
-/* -------tablet-------- */
+/* -----------------------Tablet------------------------ */
+
 @media (min-width: 640px) {
   /* Header and logo adjustments */
   .logo-icons,
@@ -257,7 +256,6 @@ button {
     margin-right: 20px;
   }
 
-  /* Search icon adjustments */
   .search-icon {
     display: flex;
     align-items: center;
@@ -280,11 +278,9 @@ button {
 
   .search-icon i,
   .heart-basket i {
-    width: auto;
     margin: 0;
   }
 
-  /* Navigation and layout */
   nav ul {
     flex-direction: row;
   }
@@ -293,7 +289,6 @@ button {
     padding: 20px 40px 0px 40px;
   }
 
-  /* Grid adjustments */
   .popular-products {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
@@ -308,11 +303,7 @@ button {
     grid-template-columns: 1fr 1fr;
   }
 
-  .copyright {
-    padding: 20px;
-  }
-
-  /*------------product details tablet--------------*/
+  /*------------product-details (tablet)--------------*/
 
   .product-details {
     display: grid;
@@ -324,10 +315,8 @@ button {
     flex-direction: column;
     gap: 10px;
     padding: 20px 40px 40px 0px;
-    justify-content: baseline;
   }
 
-  /* Product recommendations */
   .product-recs {
     display: flex;
     flex-direction: column;
@@ -354,9 +343,9 @@ button {
   .product-3 img {
     width: 100%;
     height: auto;
+    padding-bottom: 10px;
   }
 
-  /* Button styling for tablet */
   button {
     background-color: rgb(199, 199, 199);
     border-radius: 4px;
@@ -371,8 +360,15 @@ button {
   }
 }
 
-/* -------Desktop------------ */
+/* -----------------------Desktop------------------------ */
+
 @media (min-width: 1024px) {
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
   .container {
     padding-top: 40px;
   }
@@ -381,7 +377,10 @@ button {
     width: auto;
   }
 
-  /* Hero section adjustments */
+  main {
+    flex: 1;
+  }
+
   .hero-border {
     display: flex;
     flex-direction: row-reverse;
@@ -399,7 +398,7 @@ button {
     gap: 20px;
   }
 
-  /* Feature spots display */
+  /* spots section */
   .spots {
     display: flex;
     flex-direction: row;
@@ -423,12 +422,10 @@ button {
     white-space: nowrap;
   }
 
-  /* Product grid for desktop */
   .popular-products {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
-  /* Footer adjustments */
   .more-info {
     display: flex;
     flex-direction: row;
@@ -440,5 +437,9 @@ button {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+  }
+
+  footer {
+    margin-top: auto;
   }
 }
